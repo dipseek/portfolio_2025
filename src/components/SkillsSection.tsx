@@ -17,7 +17,9 @@ import {
   Palette,
   Cloud,
   Settings,
-  Globe
+  Globe,
+  Server,
+  Github
 } from 'lucide-react';
 
 const SkillsSection = () => {
@@ -26,7 +28,7 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       id: 'programming',
-      title: 'Programming Languages & Tools',
+      title: 'Programming',
       icon: <Code className="w-6 h-6" />,
       skills: [
         {
@@ -36,61 +38,11 @@ const SkillsSection = () => {
           description: 'Primary programming language for data science and ML projects'
         },
         {
-          name: 'Git & GitHub',
+          name: 'SQL',
           rating: 4,
-          icon: <GitBranch className="w-6 h-6" />,
-          description: 'Version control and collaborative development'
+          icon: <Database className="w-6 h-6" />,
+          description: 'Database queries and data extraction'
         },
-        {
-          name: 'Excel',
-          rating: 4,
-          icon: <FileSpreadsheet className="w-6 h-6" />,
-          description: 'Data analysis with VLOOKUP, Pivot Tables, and advanced formulas'
-        },
-        {
-          name: 'Linux/Unix',
-          rating: 3,
-          icon: <Terminal className="w-6 h-6" />,
-          description: 'Command line operations and server management'
-        }
-      ]
-    },
-    {
-      id: 'ml-nlp',
-      title: 'Machine Learning & NLP',
-      icon: <Brain className="w-6 h-6" />,
-      skills: [
-        {
-          name: 'Scikit-learn',
-          rating: 5,
-          icon: <Zap className="w-6 h-6" />,
-          description: 'Machine learning algorithms and model training'
-        },
-        {
-          name: 'TensorFlow',
-          rating: 4,
-          icon: <Brain className="w-6 h-6" />,
-          description: 'Deep learning and neural network development'
-        },
-        {
-          name: 'NLTK',
-          rating: 4,
-          icon: <MessageSquare className="w-6 h-6" />,
-          description: 'Natural Language Processing and text analysis'
-        },
-        {
-          name: 'NLP',
-          rating: 4,
-          icon: <MessageSquare className="w-6 h-6" />,
-          description: 'Text preprocessing, sentiment analysis, and language models'
-        }
-      ]
-    },
-    {
-      id: 'data-handling',
-      title: 'Data Handling & Analysis',
-      icon: <Database className="w-6 h-6" />,
-      skills: [
         {
           name: 'Pandas',
           rating: 5,
@@ -102,13 +54,39 @@ const SkillsSection = () => {
           rating: 5,
           icon: <BarChart className="w-6 h-6" />,
           description: 'Numerical computing and array operations'
+        }
+      ]
+    },
+    {
+      id: 'ml-ai',
+      title: 'Machine Learning & AI',
+      icon: <Brain className="w-6 h-6" />,
+      skills: [
+        {
+          name: 'TensorFlow',
+          rating: 4,
+          icon: <Brain className="w-6 h-6" />,
+          description: 'Deep learning and neural network development'
         },
         {
-          name: 'SQL',
-          rating: 4,
-          icon: <Database className="w-6 h-6" />,
-          description: 'Database queries and data extraction'
+          name: 'Scikit-learn',
+          rating: 5,
+          icon: <Zap className="w-6 h-6" />,
+          description: 'Machine learning algorithms and model training'
         },
+        {
+          name: 'NLP',
+          rating: 4,
+          icon: <MessageSquare className="w-6 h-6" />,
+          description: 'Natural Language Processing and text analysis'
+        }
+      ]
+    },
+    {
+      id: 'data-tools',
+      title: 'Data Tools & Visualization',
+      icon: <BarChart3 className="w-6 h-6" />,
+      skills: [
         {
           name: 'Power BI',
           rating: 4,
@@ -116,18 +94,11 @@ const SkillsSection = () => {
           description: 'Business intelligence and interactive dashboards'
         },
         {
-          name: 'Excel (Advanced)',
+          name: 'Excel',
           rating: 4,
           icon: <FileSpreadsheet className="w-6 h-6" />,
-          description: 'VLOOKUP, Pivot Tables, and complex data analysis'
-        }
-      ]
-    },
-    {
-      id: 'visualization',
-      title: 'Data Visualization',
-      icon: <BarChart3 className="w-6 h-6" />,
-      skills: [
+          description: 'Data analysis with VLOOKUP, Pivot Tables, and advanced formulas'
+        },
         {
           name: 'Matplotlib',
           rating: 4,
@@ -143,33 +114,58 @@ const SkillsSection = () => {
       ]
     },
     {
-      id: 'devops',
-      title: 'Deployment & DevOps',
-      icon: <Wrench className="w-6 h-6" />,
+      id: 'api-development',
+      title: 'API Development',
+      icon: <Globe className="w-6 h-6" />,
       skills: [
         {
-          name: 'Docker & Kubernetes',
-          rating: 3,
-          icon: <Cloud className="w-6 h-6" />,
-          description: 'Containerization and orchestration'
-        },
-        {
-          name: 'Jenkins & GitHub Actions',
-          rating: 3,
-          icon: <Settings className="w-6 h-6" />,
-          description: 'CI/CD pipelines and automation'
-        },
-        {
-          name: 'AWS',
-          rating: 3,
-          icon: <Cloud className="w-6 h-6" />,
-          description: 'Cloud infrastructure and services'
-        },
-        {
-          name: 'API Deployment',
+          name: 'FastAPI',
           rating: 4,
-          icon: <Globe className="w-6 h-6" />,
-          description: 'RESTful APIs and web service deployment'
+          icon: <Server className="w-6 h-6" />,
+          description: 'Modern, fast web framework for building APIs'
+        },
+        {
+          name: 'Pydantic',
+          rating: 4,
+          icon: <Settings className="w-6 h-6" />,
+          description: 'Data validation and settings management'
+        }
+      ]
+    },
+    {
+      id: 'cloud-devops',
+      title: 'Cloud & DevOps',
+      icon: <Cloud className="w-6 h-6" />,
+      skills: [
+        {
+          name: 'AWS (Deployment)',
+          rating: 3,
+          icon: <Cloud className="w-6 h-6" />,
+          description: 'Cloud infrastructure and deployment services'
+        },
+        {
+          name: 'Docker',
+          rating: 3,
+          icon: <Wrench className="w-6 h-6" />,
+          description: 'Containerization and application deployment'
+        },
+        {
+          name: 'Git',
+          rating: 4,
+          icon: <GitBranch className="w-6 h-6" />,
+          description: 'Version control and collaborative development'
+        },
+        {
+          name: 'GitHub',
+          rating: 4,
+          icon: <Github className="w-6 h-6" />,
+          description: 'Code hosting and collaborative development platform'
+        },
+        {
+          name: 'Linux',
+          rating: 3,
+          icon: <Terminal className="w-6 h-6" />,
+          description: 'Command line operations and server management'
         }
       ]
     }
@@ -244,8 +240,8 @@ const SkillsSection = () => {
               onClick={() => setActiveTab(index)}
               className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 backdrop-blur-sm ${
                 activeTab === index
-                  ? 'bg-purple-500/80 text-white shadow-lg'
-                  : 'bg-white/15 text-white/80 hover:bg-white/25 hover:text-white'
+                  ? 'bg-gradient-to-r from-cyan-500 to-cyan-600 text-black shadow-lg'
+                  : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-cyan-400'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -279,24 +275,24 @@ const SkillsSection = () => {
                 <motion.div
                   key={skill.name}
                   variants={itemVariants}
-                  className="group relative bg-white/15 backdrop-blur-md rounded-xl p-6 border border-white/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  className="group relative bg-black/40 backdrop-blur-md rounded-xl p-6 border border-cyan-500/30 hover:bg-black/60 transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   whileHover={{ 
                     scale: 1.02,
                     boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)"
                   }}
                 >
                   {/* Tooltip */}
-                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10 max-w-xs text-center">
+                  <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 bg-black text-gray-200 text-xs px-3 py-1 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-10 max-w-xs text-center">
                     {skill.description}
-                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
+                    <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
                   </div>
 
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
-                      <div className="text-purple-200 group-hover:text-purple-100 transition-colors duration-300">
+                      <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                         {skill.icon}
                       </div>
-                      <h3 className="text-white font-semibold text-lg">
+                      <h3 className="text-gray-200 font-semibold text-lg">
                         {skill.name}
                       </h3>
                     </div>
@@ -304,7 +300,7 @@ const SkillsSection = () => {
                   
                   <div className="flex justify-between items-center">
                     <StarRating rating={skill.rating} />
-                    <span className="text-white/60 text-sm">
+                    <span className="text-gray-400 text-sm">
                       {skill.rating}/5
                     </span>
                   </div>

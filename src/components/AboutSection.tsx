@@ -93,7 +93,7 @@ const AboutSection = () => {
         >
           {/* Main Heading */}
           <motion.h2 
-            className="text-4xl sm:text-5xl font-bold text-white mb-16 text-center"
+            className="text-4xl sm:text-5xl font-bold text-gray-200 mb-16 text-center"
             variants={itemVariants}
           >
             About Me
@@ -105,43 +105,12 @@ const AboutSection = () => {
             variants={itemVariants}
           >
             <div className="p-8 sm:p-12">
-              <p className="text-white/90 text-lg sm:text-xl leading-relaxed text-center max-w-4xl mx-auto">
-                My name is <span className="text-purple-200 font-semibold">Deepika Saini</span>, a Data Scientist and AI enthusiast from Jaipur, Rajasthan. I work with data analysis, machine learning models, and cloud deployments to build smart, scalable solutions. Beyond tech, I love playing chess, singing, travelling, exploring, foodie and love animals. Always ready for the challenges.
+              <p className="text-gray-300 text-lg sm:text-xl leading-relaxed text-center max-w-4xl mx-auto">
+                I'm <span className="text-cyan-400 font-semibold">Deepika Saini</span>, an aspiring Data Scientist from Jaipur. I specialize in building data-driven solutions using Python, SQL, and modern ML/NLP libraries including TensorFlow, Scikit-learn, and NLTK. I'm comfortable working with Jupyter, Excel, and Power BI for analysis and visualization, and I have hands-on exposure to deploying models and apps using AWS, Docker, FastAPI, and Tkinter. I'm driven by curiosity, clarity, and impact—eager to contribute to real-world projects and grow with a team that values learning and execution.
               </p>
             </div>
           </motion.div>
-
-          {/* Fun Facts Section */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-12 text-center">
-              Beyond the Code
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {funFacts.map((fact, index) => (
-                <motion.div
-                  key={fact.title}
-                  variants={cardVariants}
-                  whileHover="hover"
-                  className="group"
-                >
-                  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 h-full">
-                    <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${fact.color} flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      {fact.icon}
-                    </div>
-                    
-                    <h4 className="text-white font-semibold text-lg mb-2 text-center">
-                      {fact.title}
-                    </h4>
-                    
-                    <p className="text-white/70 text-sm text-center leading-relaxed">
-                      {fact.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
+          {/* Removed "Beyond the Code" section as requested */}
         </motion.div>
       </div>
     </section>

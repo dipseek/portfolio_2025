@@ -118,28 +118,33 @@ const HeroSection = () => {
             </h1>
           </motion.div>
 
-          {/* Subtitle - AI/ML Enthusiast */}
+          {/* Professional Tagline under Name */}
           <motion.div variants={itemVariants}>
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-purple-200 drop-shadow">
-              AI/ML Enthusiast
+            <p className="text-white/80 text-base sm:text-lg lg:text-xl">Turning data into insights.</p>
+          </motion.div>
+
+          {/* Subtitle - Professional Title */}
+          <motion.div variants={itemVariants}>
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-medium text-cyan-400 drop-shadow">
+              Data Scientist | AI Enthusiast | Fresher
             </h2>
           </motion.div>
 
-          {/* Subheadline - Gradient Reveal Effect */}
+          {/* Career-aligned Quote - Gradient Reveal Effect */}
           <motion.div variants={gradientTextVariants}>
             <h3 
-              className="text-lg sm:text-xl lg:text-2xl font-medium bg-gradient-to-r from-purple-200 via-white to-purple-200 bg-clip-text text-transparent bg-[length:200%_100%]"
+              className="text-lg sm:text-xl lg:text-2xl font-medium bg-gradient-to-r from-cyan-400 via-gray-200 to-cyan-400 bg-clip-text text-transparent bg-[length:200%_100%]"
               style={{
-                backgroundImage: "linear-gradient(90deg, #e9d5ff 0%, #ffffff 50%, #e9d5ff 100%)"
+                backgroundImage: "linear-gradient(90deg, #00ffcc 0%, #e6e6e6 50%, #00ffcc 100%)"
               }}
             >
-              "an engineer can be a creator."
+              "Passionate about solving real-world problems with data and AI."
             </h3>
           </motion.div>
 
           {/* Location */}
           <motion.p 
-            className="text-white/80 text-lg"
+            className="text-gray-300 text-lg"
             variants={itemVariants}
           >
             Jaipur, Rajasthan
@@ -154,7 +159,7 @@ const HeroSection = () => {
               href={resumePdf}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3 bg-white/30 text-purple-900 rounded-xl font-semibold shadow-md hover:bg-white/50 transition-all duration-200 flex items-center justify-center space-x-2 backdrop-blur-md border border-white/40"
+              className="px-8 py-3 bg-black/40 text-gray-200 rounded-xl font-semibold shadow-md hover:bg-black/60 transition-all duration-200 flex items-center justify-center space-x-2 backdrop-blur-md border border-cyan-500/30"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -163,7 +168,7 @@ const HeroSection = () => {
             </motion.a>
             <motion.button
               onClick={scrollToContact}
-              className="px-8 py-3 bg-purple-400/30 text-white rounded-xl font-semibold shadow-md hover:bg-purple-400/50 transition-all duration-200 flex items-center justify-center space-x-2 backdrop-blur-md border border-white/40"
+              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-black rounded-xl font-semibold shadow-md hover:from-cyan-400 hover:to-cyan-500 transition-all duration-200 flex items-center justify-center space-x-2 backdrop-blur-md border border-cyan-400/50"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

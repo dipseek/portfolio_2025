@@ -11,6 +11,8 @@ body {
   padding: 0;
   overflow-x: hidden;
   @apply font-sans;
+  background-color: #0a0a0a;
+  color: #e6e6e6;
 }
 
 @layer utilities {
@@ -117,14 +119,14 @@ em, i {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(230, 230, 230, 0.1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(222, 181, 236, 0.5);
+  background: rgba(0, 255, 204, 0.5);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 181, 236, 0.8);
+  background: rgba(0, 255, 204, 0.8);
 }

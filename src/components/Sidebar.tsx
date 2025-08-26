@@ -1,8 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Github, Linkedin, Twitter, Instagram, Mail } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { Github, Linkedin, Twitter, Instagram, Mail, Home } from 'lucide-react';
 
 const Sidebar = () => {
+  const location = useLocation();
+  
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -24,20 +26,20 @@ const Sidebar = () => {
   );
 
   return (
-    <div className="fixed left-0 top-0 h-full w-80 bg-black/20 backdrop-blur-lg border-r border-white/10 z-50">
+    <div className="fixed left-0 top-0 h-full w-80 bg-black/60 backdrop-blur-lg border-r border-cyan-500/30 z-50">
       <div className="p-8 flex flex-col h-full">
         {/* Logo */}
         <div className="mb-12">
-          <h1 className="text-2xl font-bold text-white tracking-tight">
+          <h1 className="text-2xl font-bold text-cyan-400 tracking-tight">
             Deepika Saini
           </h1>
-          <p className="text-purple-200 text-sm mt-2">An Engineer</p>
+          <p className="text-cyan-300 text-sm mt-2">An Engineer</p>
         </div>
 
         {/* Navigation */}
         <nav className="space-y-6 mb-12">
           {[
-            { id: 'hero', label: 'Home', isLink: false },
+            { id: 'home', label: 'Home', isLink: true, path: '/', icon: <Home className="w-4 h-4" /> },
             { id: 'about', label: 'About', isLink: true, path: '/about' },
             { id: 'skills', label: 'Skills', isLink: true, path: '/skills' },
             { id: 'projects', label: 'Projects', isLink: true, path: '/projects' },
@@ -48,15 +50,18 @@ const Sidebar = () => {
               <Link
                 key={item.id}
                 to={item.path!}
-                className="block text-white/80 hover:text-white transition-colors duration-200 text-left hover:translate-x-2 transform transition-transform"
+                className={`flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-left hover:translate-x-2 transform transition-transform ${
+                  location.pathname === item.path ? 'text-cyan-400 font-semibold' : ''
+                }`}
               >
-                {item.label}
+                {item.icon && item.icon}
+                <span>{item.label}</span>
               </Link>
             ) : (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block text-white/80 hover:text-white transition-colors duration-200 text-left hover:translate-x-2 transform transition-transform"
+                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-left hover:translate-x-2 transform transition-transform"
               >
                 {item.label}
               </button>
@@ -71,7 +76,7 @@ const Sidebar = () => {
               href="https://github.com/dipseek"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors duration-200 hover:scale-110 transform transition-transform"
+              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:scale-110 transform transition-transform"
             >
               <Github size={20} />
             </a>
@@ -79,7 +84,7 @@ const Sidebar = () => {
               href="https://www.linkedin.com/in/deepika-saini-90663a279"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors duration-200 hover:scale-110 transform transition-transform"
+              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:scale-110 transform transition-transform"
             >
               <Linkedin size={20} />
             </a>
@@ -87,7 +92,7 @@ const Sidebar = () => {
               href="https://twitter.com/dipseek"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors duration-200 hover:scale-110 transform transition-transform"
+              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:scale-110 transform transition-transform"
             >
               <Twitter size={20} />
             </a>
@@ -95,7 +100,7 @@ const Sidebar = () => {
               href="https://instagram.com/dipseek"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors duration-200 hover:scale-110 transform transition-transform"
+              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:scale-110 transform transition-transform"
             >
               <Instagram size={20} />
             </a>
@@ -103,14 +108,14 @@ const Sidebar = () => {
               href="https://discord.com/users/dipseek_"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors duration-200 hover:scale-110 transform transition-transform"
+              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:scale-110 transform transition-transform"
             >
               <DiscordIcon />
             </a>
           </div>
           <a
             href="mailto:dipseek5@gmail.com"
-            className="flex items-center space-x-2 text-white/60 hover:text-white transition-colors duration-200"
+            className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200"
           >
             <Mail size={16} />
             <span className="text-sm">dipseek5@gmail.com</span>
