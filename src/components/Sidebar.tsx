@@ -4,19 +4,12 @@ import { Github, Linkedin, Twitter, Instagram, Mail, Home } from 'lucide-react';
 
 const Sidebar = () => {
   const location = useLocation();
-  
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   // Custom Discord Icon Component
   const DiscordIcon = () => (
     <svg
-      width="20"
-      height="20"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="currentColor"
       className="text-white/60 hover:text-white transition-colors duration-200"
@@ -26,100 +19,64 @@ const Sidebar = () => {
   );
 
   return (
-    <div className="fixed left-0 top-0 h-full w-80 bg-black/60 backdrop-blur-lg border-r border-cyan-500/30 z-50">
-      <div className="p-8 flex flex-col h-full">
-        {/* Logo */}
-        <div className="mb-12">
-          <h1 className="text-2xl font-bold text-cyan-400 tracking-tight">
-            Deepika Saini
-          </h1>
-          <p className="text-cyan-300 text-sm mt-2">An Engineer</p>
-        </div>
+    <div className="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-lg border-b border-cyan-500/30 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <h1 className="text-xl font-bold text-cyan-400 tracking-tight">
+              Deepika Saini
+            </h1>
+          </div>
 
-        {/* Navigation */}
-        <nav className="space-y-6 mb-12">
-          {[
-            { id: 'home', label: 'Home', isLink: true, path: '/', icon: <Home className="w-4 h-4" /> },
-            { id: 'about', label: 'About', isLink: true, path: '/about' },
-            { id: 'skills', label: 'Skills', isLink: true, path: '/skills' },
-            { id: 'projects', label: 'Projects', isLink: true, path: '/projects' },
-            { id: 'education', label: 'Education', isLink: true, path: '/education' },
-            { id: 'contact', label: 'Contact', isLink: true, path: '/contact' }
-          ].map((item) => (
-            item.isLink ? (
+          {/* Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {[
+              { id: 'home', label: 'Home', path: '/', icon: <Home className="w-4 h-4" /> },
+              { id: 'about', label: 'About', path: '/about' },
+              { id: 'skills', label: 'Skills', path: '/skills' },
+              { id: 'projects', label: 'Projects', path: '/projects' },
+              { id: 'education', label: 'Education', path: '/education' },
+              { id: 'contact', label: 'Contact', path: '/contact' }
+            ].map((item) => (
               <Link
                 key={item.id}
-                to={item.path!}
-                className={`flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-left hover:translate-x-2 transform transition-transform ${
+                to={item.path}
+                className={`flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 ${
                   location.pathname === item.path ? 'text-cyan-400 font-semibold' : ''
                 }`}
               >
                 {item.icon && item.icon}
-                <span>{item.label}</span>
+                <span className="text-sm">{item.label}</span>
               </Link>
-            ) : (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className="block text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-left hover:translate-x-2 transform transition-transform"
-              >
-                {item.label}
-              </button>
-            )
-          ))}
-        </nav>
+            ))}
+          </nav>
 
-        {/* Social Links */}
-        <div className="mt-auto space-y-6">
-          <div className="flex space-x-4">
+          {/* Social Links */}
+          <div className="flex items-center space-x-4">
             <a
               href="https://github.com/dipseek"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:scale-110 transform transition-transform"
+              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
             >
-              <Github size={20} />
+              <Github size={16} />
             </a>
             <a
               href="https://www.linkedin.com/in/deepika-saini-90663a279"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:scale-110 transform transition-transform"
+              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
             >
-              <Linkedin size={20} />
+              <Linkedin size={16} />
             </a>
             <a
-              href="https://twitter.com/dipseek"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:scale-110 transform transition-transform"
+              href="mailto:dipseek5@gmail.com"
+              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
             >
-              <Twitter size={20} />
-            </a>
-            <a
-              href="https://instagram.com/dipseek"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:scale-110 transform transition-transform"
-            >
-              <Instagram size={20} />
-            </a>
-            <a
-              href="https://discord.com/users/dipseek_"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:scale-110 transform transition-transform"
-            >
-              <DiscordIcon />
+              <Mail size={16} />
             </a>
           </div>
-          <a
-            href="mailto:dipseek5@gmail.com"
-            className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors duration-200"
-          >
-            <Mail size={16} />
-            <span className="text-sm">dipseek5@gmail.com</span>
-          </a>
         </div>
       </div>
     </div>

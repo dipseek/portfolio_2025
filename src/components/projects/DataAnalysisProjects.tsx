@@ -1,11 +1,14 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, BarChart3, Github, ExternalLink, FileText } from 'lucide-react';
+import { ArrowLeft, BarChart3, Github, ExternalLink, FileText, X, Maximize2 } from 'lucide-react';
 import jobImage from '../../assests/job.png';
 import iplImage from '../../assests/ipl.png';
 
 const DataAnalysisProjects = () => {
+  const [showImageModal, setShowImageModal] = useState(false);
+  const [currentImage, setCurrentImage] = useState<{ src: string; title: string } | null>(null);
+
   const dataAnalysisProjects = [
     {
       title: 'Job Openings in India Dashboard',
@@ -47,9 +50,19 @@ const DataAnalysisProjects = () => {
     }
   };
 
+  const handleImageModalOpen = (imageSrc: string, title: string) => {
+    setCurrentImage({ src: imageSrc, title });
+    setShowImageModal(true);
+  };
+
+  const handleImageModalClose = () => {
+    setShowImageModal(false);
+    setCurrentImage(null);
+  };
+
   return (
     <section className="py-20">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -80,7 +93,7 @@ const DataAnalysisProjects = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+          className="space-y-8"
         >
           {dataAnalysisProjects.map((project, index) => (
             <motion.div
@@ -90,10 +103,10 @@ const DataAnalysisProjects = () => {
                 scale: 1.02,
                 transition: { duration: 0.2 }
               }}
-              className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
+              className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-semibold text-white mb-2">
+              <div className="flex justify-between items-start mb-6">
+                <h3 className="text-2xl font-semibold text-white mb-2">
                   {project.title}
                 </h3>
                 <div className="flex space-x-2">
@@ -120,15 +133,15 @@ const DataAnalysisProjects = () => {
                 </div>
               </div>
               
-              <p className="text-white/80 text-sm leading-relaxed mb-4">
+              <p className="text-white/80 text-base leading-relaxed mb-6">
                 {project.description}
               </p>
               
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-wrap gap-2 mb-6">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs text-white/60 bg-green-500/20 px-3 py-1 rounded-full"
+                    className="text-sm text-white/60 bg-green-500/20 px-4 py-2 rounded-full"
                   >
                     {tech}
                   </span>
@@ -136,36 +149,43 @@ const DataAnalysisProjects = () => {
               </div>
               
               {/* Dashboard Image Preview */}
-              <div className="mb-4">
+              <div className="mb-6">
                 <div className="bg-white/5 rounded-lg p-4 border border-white/10 overflow-hidden">
                   <div className="relative group">
                     <img
                       src={project.image}
                       alt={`${project.title} Preview`}
-                      className="w-full h-48 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-64 object-cover rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-end">
                       <div className="p-4 w-full">
-                        <a
-                          href={project.pdfImage}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm hover:bg-white/30 transition-colors duration-200"
+                        <button
+                          onClick={() => handleImageModalOpen(project.image, project.title)}
+                          className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm hover:bg-white/30 transition-colors duration-200"
                         >
-                          <FileText className="w-4 h-4" />
+                          <Maximize2 className="w-4 h-4" />
                           <span>View Full Dashboard</span>
-                        </a>
+                        </button>
                       </div>
                     </div>
+                    
+                    {/* Full Screen Button */}
+                    <button
+                      onClick={() => handleImageModalOpen(project.image, project.title)}
+                      className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white p-2 rounded-lg hover:bg-black/70 transition-all duration-200 opacity-0 group-hover:opacity-100"
+                      title="Open in full screen"
+                    >
+                      <Maximize2 className="w-4 h-4" />
+                    </button>
                   </div>
                 </div>
               </div>
               
               <div className="flex items-center justify-between">
-                <span className="text-xs text-white/60 bg-gradient-to-r from-green-500 to-emerald-500 px-3 py-1 rounded-full">
+                <span className="text-sm text-white/60 bg-gradient-to-r from-green-500 to-emerald-500 px-4 py-2 rounded-full">
                   Data Analysis
                 </span>
-                <span className="text-xs text-white/60">
+                <span className="text-sm text-white/60">
                   Power BI
                 </span>
               </div>
@@ -173,6 +193,46 @@ const DataAnalysisProjects = () => {
           ))}
         </motion.div>
       </div>
+
+      {/* Image Modal */}
+      <AnimatePresence>
+        {showImageModal && currentImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={handleImageModalClose}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="relative max-w-6xl w-full max-h-[90vh]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header with title and close button */}
+              <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between p-4">
+                <h3 className="text-white text-lg font-semibold bg-black/50 backdrop-blur-sm px-4 py-2 rounded-lg">
+                  {currentImage.title}
+                </h3>
+                <button
+                  onClick={handleImageModalClose}
+                  className="text-white hover:text-cyan-400 transition-colors duration-200 bg-black/50 backdrop-blur-sm p-2 rounded-lg hover:bg-black/70"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+              
+              <img
+                src={currentImage.src}
+                alt={currentImage.title}
+                className="w-full h-full object-contain rounded-lg"
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

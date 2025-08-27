@@ -56,7 +56,7 @@ const ContactSection = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Information */}
-          <div className="bg-black/40 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/30 shadow-xl">
+          <div className="bg-black/40 backdrop-blur-md rounded-xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 shadow-xl">
             <h3 className="text-gray-200 font-bold text-xl mb-6">
               Contact Information
             </h3>
@@ -104,17 +104,19 @@ const ContactSection = () => {
           </div>
           
           {/* Call to Action */}
-          <div className="bg-black/40 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/30 shadow-xl">
+          <div className="bg-black/40 backdrop-blur-md rounded-xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 shadow-xl">
             <h3 className="text-gray-200 font-bold text-xl mb-6">
               Let's Work Together
             </h3>
             
             <p className="text-gray-300 mb-8 leading-relaxed">
-              Let's work together! Reach out via email or LinkedIn.
+              I'm always excited to discuss new opportunities, collaborate on interesting projects, 
+              or simply chat about data engineering, machine learning, and technology. 
+              Feel free to reach out!
             </p>
             
             <div className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <a
                   href="mailto:dipseek5@gmail.com"
                   className="px-6 py-3 bg-black/60 text-gray-200 border border-cyan-500/30 rounded-lg font-medium hover:bg-black/80 transition-colors duration-200 hover:scale-105 transform transition-transform flex items-center justify-center space-x-2 backdrop-blur-sm"
@@ -131,15 +133,16 @@ const ContactSection = () => {
                   <Linkedin size={20} />
                   <span>LinkedIn</span>
                 </a>
-                <a
-                  href={resumePdf}
-                  download="Deepika_Resume.pdf"
-                  className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-black rounded-lg font-medium hover:from-cyan-400 hover:to-cyan-500 transition-colors duration-200 hover:scale-105 transform transition-transform flex items-center justify-center space-x-2"
-                >
-                  <Download size={20} />
-                  <span>Resume</span>
-                </a>
               </div>
+              
+              <a
+                href={resumePdf}
+                download="Deepika_Resume.pdf"
+                className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-black rounded-lg font-medium hover:from-cyan-400 hover:to-cyan-500 transition-colors duration-200 hover:scale-105 transform transition-transform flex items-center justify-center space-x-2"
+              >
+                <Download size={20} />
+                <span>Download Resume</span>
+              </a>
             </div>
           </div>
         </div>

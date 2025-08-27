@@ -76,7 +76,7 @@ const ProjectsOverview = () => {
 
   return (
     <section id="projects" className="py-20">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -107,7 +107,7 @@ const ProjectsOverview = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          className="space-y-6"
         >
           {categories.map((category, index) => (
             <motion.div

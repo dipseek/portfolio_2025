@@ -43,14 +43,14 @@ function App() {
     <Router>
       <div className="min-h-screen relative overflow-hidden">
         <AnimatedBackground />
-        {/* Desktop Sidebar */}
-        <div className="hidden lg:block">
+        {/* Desktop Navigation */}
+        <div className="hidden md:block">
           <Sidebar />
         </div>
         {/* Mobile Navigation */}
         <MobileNav isOpen={mobileMenuOpen} setIsOpen={setMobileMenuOpen} />
         {/* Main Content */}
-        <main className="lg:ml-80 relative z-10">
+        <main className="pt-16 relative z-10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Suspense fallback={<LoadingFallback />}>
               <Routes>

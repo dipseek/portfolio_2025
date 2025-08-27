@@ -76,7 +76,7 @@ const PythonProjects = () => {
 
   return (
     <section className="py-20">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -108,7 +108,7 @@ const PythonProjects = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+          className="space-y-8"
         >
           {pythonProjects.map((project, index) => (
             <motion.div
@@ -118,7 +118,7 @@ const PythonProjects = () => {
                 scale: 1.02,
                 transition: { duration: 0.2 }
               }}
-              className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
+              className="bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300"
             >
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-semibold text-white mb-2">

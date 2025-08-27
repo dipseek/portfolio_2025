@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Download, Github, Linkedin, Twitter, Instagram, Home } from 'lucide-react';
+import { Mail, Phone, MapPin, Download, Github, Linkedin, Twitter, Instagram, ArrowLeft } from 'lucide-react';
 import resumePdf from '../assests/deepika-resume.pdf';
 
 const ContactPage = () => {
@@ -99,20 +99,20 @@ const ContactPage = () => {
           transition={{ duration: 0.8 }}
           className="mb-12"
         >
-          <div className="flex items-center justify-center mb-6">
+          <div className="flex items-center mb-6">
             <Link 
               to="/"
-              className="flex items-center text-white/70 hover:text-white transition-colors duration-200"
+              className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200 mr-4"
             >
-              <Home className="w-5 h-5 mr-2" />
+              <ArrowLeft className="w-5 h-5 mr-2" />
               Back to Home
             </Link>
           </div>
           
-          <h1 className="text-3xl sm:text-4xl font-bold text-white mb-6 text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-200 mb-4">
             Get In Touch
           </h1>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto text-center">
+          <p className="text-lg text-gray-300 max-w-3xl">
             I'm always excited to discuss new opportunities, collaborate on interesting projects, 
             or simply chat about data engineering, machine learning, and technology.
           </p>
@@ -128,29 +128,29 @@ const ContactPage = () => {
           {/* Contact Information */}
           <motion.div 
             variants={itemVariants}
-            className="bg-white/15 backdrop-blur-md rounded-2xl p-8 border border-white/30 shadow-xl"
+            className="bg-black/40 backdrop-blur-md rounded-xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 shadow-xl"
           >
-            <h3 className="text-white font-bold text-xl mb-6">
+            <h3 className="text-gray-200 font-bold text-xl mb-6">
               Contact Information
             </h3>
             
             <div className="space-y-4 mb-8">
               {contactInfo.map((info) => (
                 <div key={info.label} className="flex items-center space-x-3">
-                  <div className="text-purple-200">
+                  <div className="text-cyan-400">
                     {info.icon}
                   </div>
                   <div>
-                    <p className="text-white/70 text-sm">{info.label}</p>
+                    <p className="text-gray-400 text-sm">{info.label}</p>
                     {info.href ? (
                       <a
                         href={info.href}
-                        className="text-white hover:text-purple-200 transition-colors duration-200"
+                        className="text-gray-200 hover:text-cyan-400 transition-colors duration-200"
                       >
                         {info.value}
                       </a>
                     ) : (
-                      <p className="text-white">{info.value}</p>
+                      <p className="text-gray-200">{info.value}</p>
                     )}
                   </div>
                 </div>
@@ -158,7 +158,7 @@ const ContactPage = () => {
             </div>
             
             <div className="space-y-4">
-              <h4 className="text-white font-semibold">Find me on:</h4>
+              <h4 className="text-gray-200 font-semibold">Find me on:</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((link) => (
                   <a
@@ -166,7 +166,7 @@ const ContactPage = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white/60 hover:text-white transition-colors duration-200 hover:scale-110 transform transition-transform"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 hover:scale-110 transform transition-transform"
                     title={link.label}
                   >
                     {link.icon}
@@ -179,34 +179,45 @@ const ContactPage = () => {
           {/* Call to Action */}
           <motion.div 
             variants={itemVariants}
-            className="bg-white/15 backdrop-blur-md rounded-2xl p-8 border border-white/30 shadow-xl"
+            className="bg-black/40 backdrop-blur-md rounded-xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 shadow-xl"
           >
-            <h3 className="text-white font-bold text-xl mb-6">
+            <h3 className="text-gray-200 font-bold text-xl mb-6">
               Let's Work Together
             </h3>
             
-            <p className="text-white/70 mb-8 leading-relaxed">
+            <p className="text-gray-300 mb-8 leading-relaxed">
               I'm always excited to discuss new opportunities, collaborate on interesting projects, 
               or simply chat about data engineering, machine learning, and technology. 
               Feel free to reach out!
             </p>
             
             <div className="space-y-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a
+                  href="mailto:dipseek5@gmail.com"
+                  className="px-6 py-3 bg-black/60 text-gray-200 border border-cyan-500/30 rounded-lg font-medium hover:bg-black/80 transition-colors duration-200 hover:scale-105 transform transition-transform flex items-center justify-center space-x-2 backdrop-blur-sm"
+                >
+                  <Mail size={20} />
+                  <span>Email</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/deepika-saini-90663a279"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-black/60 text-gray-200 border border-cyan-500/30 rounded-lg font-medium hover:bg-black/80 transition-colors duration-200 hover:scale-105 transform transition-transform flex items-center justify-center space-x-2 backdrop-blur-sm"
+                >
+                  <Linkedin size={20} />
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+              
               <a
                 href={resumePdf}
                 download="Deepika_Resume.pdf"
-                className="w-full px-6 py-3 bg-purple-200 text-purple-900 rounded-lg font-medium hover:bg-purple-100 transition-colors duration-200 hover:scale-105 transform transition-transform flex items-center justify-center space-x-2"
+                className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-600 text-black rounded-lg font-medium hover:from-cyan-400 hover:to-cyan-500 transition-colors duration-200 hover:scale-105 transform transition-transform flex items-center justify-center space-x-2"
               >
                 <Download size={20} />
                 <span>Download Resume</span>
-              </a>
-              
-              <a
-                href="mailto:dipseek5@gmail.com"
-                className="w-full px-6 py-3 bg-white/15 text-white border border-white/30 rounded-lg font-medium hover:bg-white/25 transition-colors duration-200 hover:scale-105 transform transition-transform flex items-center justify-center space-x-2 backdrop-blur-sm"
-              >
-                <Mail size={20} />
-                <span>Send Email</span>
               </a>
             </div>
           </motion.div>
