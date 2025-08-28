@@ -186,9 +186,9 @@ const ContactPage = () => {
             </h3>
             
             <p className="text-gray-300 mb-8 leading-relaxed">
-              I'm always excited to discuss new opportunities, collaborate on interesting projects, 
-              or simply chat about data engineering, machine learning, and technology. 
-              Feel free to reach out!
+              Feel free to reach out via email or LinkedIn for any opportunities, collaborations, 
+              or questions about data science and machine learning. You can also download my resume 
+              to learn more about my experience and skills.
             </p>
             
             <div className="space-y-4">

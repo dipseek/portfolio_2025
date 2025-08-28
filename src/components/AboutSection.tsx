@@ -93,7 +93,7 @@ const AboutSection = () => {
         >
           {/* Main Heading */}
           <motion.h2 
-            className="text-4xl sm:text-5xl font-bold text-gray-200 mb-16 text-center"
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-8 sm:mb-12 lg:mb-16 text-center"
             variants={itemVariants}
           >
             About Me
@@ -101,11 +101,11 @@ const AboutSection = () => {
           
           {/* Main Introduction */}
           <motion.div 
-            className="mb-16"
+            className="mb-8 sm:mb-12 lg:mb-16"
             variants={itemVariants}
           >
-            <div className="p-8 sm:p-12">
-              <p className="text-gray-300 text-lg sm:text-xl leading-relaxed text-center max-w-4xl mx-auto">
+            <div className="p-4 sm:p-6 lg:p-8">
+              <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed text-center max-w-4xl mx-auto">
                 I'm <span className="text-cyan-400 font-semibold">Deepika Saini</span>, an aspiring Data Scientist from Jaipur. I specialize in building data-driven solutions using Python, SQL, and modern ML/NLP libraries including TensorFlow, Scikit-learn, and NLTK. I'm comfortable working with Jupyter, Excel, and Power BI for analysis and visualization, and I have hands-on exposure to deploying models and apps using AWS, Docker, FastAPI, and Tkinter. I'm driven by curiosity, clarity, and impact—eager to contribute to real-world projects and grow with a team that values learning and execution.
               </p>
             </div>

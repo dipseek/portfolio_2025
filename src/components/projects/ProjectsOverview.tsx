@@ -19,36 +19,36 @@ const ProjectsOverview = () => {
       description: 'Automation, APIs, and utility applications built with Python',
       icon: Code2,
       path: '/projects/python',
-      color: 'from-blue-500 to-cyan-500',
-      bgColor: 'bg-blue-500/20',
-      borderColor: 'border-blue-500/30'
+      color: 'from-cyan-500 to-cyan-600',
+      bgColor: 'bg-black/40',
+      borderColor: 'border-cyan-500/30'
     },
     {
       title: 'Machine Learning',
       description: 'ML models, algorithms, and data science projects',
       icon: Brain,
       path: '/projects/ml',
-      color: 'from-purple-500 to-pink-500',
-      bgColor: 'bg-purple-500/20',
-      borderColor: 'border-purple-500/30'
+      color: 'from-cyan-500 to-cyan-600',
+      bgColor: 'bg-black/40',
+      borderColor: 'border-cyan-500/30'
     },
     {
       title: 'Data Analysis',
       description: 'Data visualization, analytics, and insights projects',
       icon: BarChart3,
       path: '/projects/data-analysis',
-      color: 'from-green-500 to-emerald-500',
-      bgColor: 'bg-green-500/20',
-      borderColor: 'border-green-500/30'
+      color: 'from-cyan-500 to-cyan-600',
+      bgColor: 'bg-black/40',
+      borderColor: 'border-cyan-500/30'
     },
     {
       title: 'Generative AI',
       description: 'AI-powered content generation and creative applications',
       icon: Sparkles,
       path: '/projects/genai',
-      color: 'from-orange-500 to-red-500',
-      bgColor: 'bg-orange-500/20',
-      borderColor: 'border-orange-500/30'
+      color: 'from-cyan-500 to-cyan-600',
+      bgColor: 'bg-black/40',
+      borderColor: 'border-cyan-500/30'
     }
   ];
 
@@ -87,17 +87,17 @@ const ProjectsOverview = () => {
             <div className="flex justify-center mb-6">
               <Link 
                 to="/"
-                className="flex items-center text-white/70 hover:text-white transition-colors duration-200"
+                className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200"
               >
                 <Home className="w-5 h-5 mr-2" />
                 Back to Home
               </Link>
             </div>
           )}
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-200 mb-6">
             My Projects
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Explore my work across different technologies and domains. Each category contains 
             carefully crafted projects showcasing various skills and applications.
           </p>
@@ -123,7 +123,7 @@ const ProjectsOverview = () => {
                 <div className={`
                   ${category.bgColor} ${category.borderColor}
                   backdrop-blur-md rounded-xl p-6 border-2 
-                  hover:border-opacity-50 transition-all duration-300
+                  hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300
                   group cursor-pointer h-full
                 `}>
                   <div className="flex items-start justify-between mb-4">
@@ -133,18 +133,18 @@ const ProjectsOverview = () => {
                     `}>
                       <category.icon className="w-6 h-6 text-white" />
                     </div>
-                    <ArrowRight className="w-5 h-5 text-white/60 group-hover:text-white/90 transition-colors duration-200" />
+                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
                   </div>
                   
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-gray-200 mb-3">
                     {category.title}
                   </h3>
                   
-                  <p className="text-white/80 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
                     {category.description}
                   </p>
                   
-                  <div className="flex items-center text-white/70 text-sm group-hover:text-white/90 transition-colors duration-200">
+                  <div className="flex items-center text-gray-400 text-sm group-hover:text-cyan-400 transition-colors duration-200">
                     <span>View Projects</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
