@@ -47,10 +47,10 @@ const EducationPage = () => {
             </Link>
           </div>
           
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-3 sm:mb-4 text-center sm:text-left">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-3 sm:mb-4 text-center">
             Education
           </h1>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl leading-relaxed text-center sm:text-left">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl leading-relaxed text-center mx-auto">
             My academic journey and educational background in Computer Science and Data Engineering.
           </p>
         </motion.div>
@@ -72,7 +72,7 @@ const EducationPage = () => {
                 </div>
               </div>
               
-              <div className="flex-1 text-center sm:text-left">
+              <div className="flex-1 text-center">
                 <h3 className="text-gray-200 font-bold text-lg sm:text-xl lg:text-2xl mb-2 sm:mb-3">
                   Bachelor of Technology in Computer Science
                 </h3>
@@ -80,7 +80,7 @@ const EducationPage = () => {
                   Jaipur Engineering College
                 </p>
                 
-                <div className="flex flex-row items-center justify-center sm:justify-start space-x-3 sm:space-x-6 text-gray-400 mb-6">
+                <div className="flex flex-row items-center justify-center space-x-3 sm:space-x-6 text-gray-400 mb-6">
                   <div className="flex items-center space-x-2 bg-cyan-500/20 px-3 sm:px-4 py-2 rounded-full">
                     <Calendar className="w-4 h-4" />
                     <span className="text-sm font-medium">2022 - 2026</span>

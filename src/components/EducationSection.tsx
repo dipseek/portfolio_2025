@@ -17,7 +17,7 @@ const EducationSection = () => {
               </div>
             </div>
             
-            <div className="flex-1 text-center sm:text-left">
+            <div className="flex-1 text-center">
               <h3 className="text-gray-200 font-bold text-base sm:text-lg md:text-xl lg:text-2xl mb-2 sm:mb-3">
                 Bachelor of Technology in Computer Science
               </h3>
