@@ -90,15 +90,15 @@ const ProjectsOverview = () => {
                 className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200 min-h-[44px] py-2 px-3 rounded-lg hover:bg-cyan-500/10"
                 aria-label="Navigate back to home page"
               >
-                <Home className="w-5 h-5 mr-2" />
-                <span>Back to Home</span>
+                <Home className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+                <span className="text-sm sm:text-base">Back to Home</span>
               </Link>
             </div>
           )}
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-200 mb-4 sm:mb-6">
+          <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-200 mb-3 sm:mb-6">
             My Projects
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto px-4 sm:px-0">
+          <p className="text-xs sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto px-4 sm:px-0">
             Explore my work across different technologies and domains. Each category contains 
             carefully crafted projects showcasing various skills and applications.
           </p>
@@ -129,25 +129,25 @@ const ProjectsOverview = () => {
                 `}>
                   <div className="flex items-start justify-between mb-4">
                     <div className={`
-                      p-3 rounded-lg bg-gradient-to-r ${category.color}
+                      p-2 sm:p-3 rounded-lg bg-gradient-to-r ${category.color}
                       shadow-lg
                     `}>
-                      <category.icon className="w-6 h-6 text-white" />
+                      <category.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
+                    <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-200 mb-3">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-200 mb-2 sm:mb-3">
                     {category.title}
                   </h3>
                   
-                  <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  <p className="text-gray-300 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
                     {category.description}
                   </p>
                   
-                  <div className="flex items-center text-gray-400 text-sm group-hover:text-cyan-400 transition-colors duration-200">
+                  <div className="flex items-center text-gray-400 text-xs sm:text-sm group-hover:text-cyan-400 transition-colors duration-200">
                     <span>View Projects</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
                   </div>
                 </div>
               </Link>
