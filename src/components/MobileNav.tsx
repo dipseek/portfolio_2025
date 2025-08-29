@@ -131,7 +131,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
                     href="https://github.com/dipseek"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-cyan-500/10"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 w-[44px] h-[44px] flex items-center justify-center hover:bg-cyan-500/10"
                     aria-label="Visit GitHub profile"
                   >
                     <Github size={20} />
@@ -140,7 +140,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
                     href="https://www.linkedin.com/in/deepika-saini-90663a279"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-cyan-500/10"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 w-[44px] h-[44px] flex items-center justify-center hover:bg-cyan-500/10"
                     aria-label="Visit LinkedIn profile"
                   >
                     <Linkedin size={20} />
@@ -149,7 +149,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
                     href="https://twitter.com/dipseek"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-cyan-500/10"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 w-[44px] h-[44px] flex items-center justify-center hover:bg-cyan-500/10"
                     aria-label="Visit Twitter profile"
                   >
                     <Twitter size={20} />
@@ -158,7 +158,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
                     href="https://instagram.com/dipseek"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-cyan-500/10"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 w-[44px] h-[44px] flex items-center justify-center hover:bg-cyan-500/10"
                     aria-label="Visit Instagram profile"
                   >
                     <Instagram size={20} />
@@ -167,7 +167,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
                     href="https://discord.com/users/dipseek_"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-cyan-500/10"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 w-[44px] h-[44px] flex items-center justify-center hover:bg-cyan-500/10"
                     aria-label="Visit Discord profile"
                   >
                     <DiscordIcon />
