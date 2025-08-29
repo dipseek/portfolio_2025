@@ -47,10 +47,10 @@ const EducationPage = () => {
             </Link>
           </div>
           
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-3 sm:mb-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-3 sm:mb-4 text-center sm:text-left">
             Education
           </h1>
-          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl leading-relaxed">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl leading-relaxed text-center sm:text-left">
             My academic journey and educational background in Computer Science and Data Engineering.
           </p>
         </motion.div>
@@ -63,7 +63,7 @@ const EducationPage = () => {
         >
           <motion.div 
             variants={itemVariants}
-            className="bg-black/40 backdrop-blur-md rounded-xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 shadow-xl"
+            className="bg-black/40 backdrop-blur-md rounded-xl p-4 sm:p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 shadow-xl"
           >
             <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
               <div className="flex-shrink-0 self-center sm:self-start">

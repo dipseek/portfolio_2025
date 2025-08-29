@@ -76,15 +76,15 @@ const DataAnalysisProjects = () => {
               className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200 mr-4 min-h-[44px] py-2 px-3 rounded-lg hover:bg-cyan-500/10"
               aria-label="Navigate back to projects page"
             >
-              <ArrowLeft className="w-5 h-5 mr-2" />
-              <span>Back to Projects</span>
+              <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
+              <span className="text-sm sm:text-base">Back to Projects</span>
             </Link>
           </div>
           
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-200 mb-4">
+          <h1 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-200 mb-3 sm:mb-4">
             Data Analysis Projects
           </h1>
-          <p className="text-lg text-gray-300 max-w-3xl">
+          <p className="text-sm sm:text-lg text-gray-300 max-w-3xl">
             Data visualization, analytics, and insights projects that transform raw data into meaningful stories and actionable insights using Power BI and advanced analytics tools.
           </p>
         </motion.div>
@@ -94,7 +94,7 @@ const DataAnalysisProjects = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="space-y-8"
+          className="space-y-4 sm:space-y-8"
         >
           {dataAnalysisProjects.map((project, index) => (
             <motion.div
@@ -104,45 +104,45 @@ const DataAnalysisProjects = () => {
                 scale: 1.02,
                 transition: { duration: 0.2 }
               }}
-              className="bg-black/40 backdrop-blur-md rounded-xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
+              className="bg-black/40 backdrop-blur-md rounded-xl p-4 sm:p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
             >
-              <div className="flex justify-between items-start mb-6">
-                <h3 className="text-2xl font-semibold text-gray-200 mb-2">
+              <div className="flex justify-between items-start mb-4 sm:mb-6">
+                <h3 className="text-lg sm:text-2xl font-semibold text-gray-200 mb-1 sm:mb-2">
                   {project.title}
                 </h3>
-                <div className="flex space-x-2">
+                <div className="flex space-x-1 sm:space-x-2">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-1 text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-2 rounded-lg hover:bg-black/60"
+                    className="flex items-center space-x-1 text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-1.5 sm:p-2 rounded-lg hover:bg-black/60"
                     title="View on GitHub"
                   >
-                    <Github className="w-4 h-4" />
-                    <ExternalLink className="w-3 h-3" />
+                    <Github className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <ExternalLink className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                   </a>
                   <a
                     href={project.pdfImage}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-1 text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-2 rounded-lg hover:bg-black/60"
+                    className="flex items-center space-x-1 text-gray-400 hover:text-cyan-400 transition-colors duration-200 p-1.5 sm:p-2 rounded-lg hover:bg-black/60"
                     title="View PDF"
                   >
-                    <FileText className="w-4 h-4" />
-                    <ExternalLink className="w-3 h-3" />
+                    <FileText className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <ExternalLink className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
                   </a>
                 </div>
               </div>
               
-              <p className="text-gray-300 text-base leading-relaxed mb-6">
+              <p className="text-gray-300 text-xs sm:text-base leading-relaxed mb-4 sm:mb-6">
                 {project.description}
               </p>
               
-              <div className="flex flex-wrap gap-2 mb-6">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="text-sm text-gray-300 bg-cyan-500/20 px-4 py-2 rounded-full"
+                    className="text-xs sm:text-sm text-gray-300 bg-cyan-500/20 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full"
                   >
                     {tech}
                   </span>
@@ -183,10 +183,10 @@ const DataAnalysisProjects = () => {
               </div>
               
               <div className="flex items-center justify-between">
-                <span className="text-sm text-gray-300 bg-gradient-to-r from-cyan-500 to-cyan-600 px-4 py-2 rounded-full">
+                <span className="text-xs sm:text-sm text-gray-300 bg-gradient-to-r from-cyan-500 to-cyan-600 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
                   Data Analysis
                 </span>
-                <span className="text-sm text-gray-400">
+                <span className="text-xs sm:text-sm text-gray-400">
                   Power BI
                 </span>
               </div>

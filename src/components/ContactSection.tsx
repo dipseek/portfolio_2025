@@ -57,7 +57,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {/* Contact Information */}
           <div className="bg-black/40 backdrop-blur-md rounded-xl p-4 sm:p-6 lg:p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 shadow-xl">
-            <h3 className="text-gray-200 font-bold text-lg sm:text-xl mb-4 sm:mb-6">
+            <h3 className="text-gray-200 font-bold text-lg sm:text-xl mb-4 sm:mb-6 text-center sm:text-left">
               Contact Information
             </h3>
             
@@ -105,11 +105,11 @@ const ContactSection = () => {
           
           {/* Call to Action */}
           <div className="bg-black/40 backdrop-blur-md rounded-xl p-4 sm:p-6 lg:p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 shadow-xl">
-            <h3 className="text-gray-200 font-bold text-lg sm:text-xl mb-4 sm:mb-6">
+            <h3 className="text-gray-200 font-bold text-lg sm:text-xl mb-4 sm:mb-6 text-center sm:text-left">
               Let's Work Together
             </h3>
             
-            <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">
+            <p className="text-gray-300 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base text-center sm:text-left">
               Feel free to reach out via email or LinkedIn for any opportunities, collaborations, 
               or questions about data science and machine learning. You can also download my resume 
               to learn more about my experience and skills.
