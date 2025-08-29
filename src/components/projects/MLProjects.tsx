@@ -2,11 +2,13 @@ import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Brain, Github, ExternalLink, Package, Database, Play, Pause, X, Maximize2 } from 'lucide-react';
+import fastapiVideo from '../../assests/fastapi.mp4';
 
 const MLProjects = () => {
   const [hoveredProject, setHoveredProject] = useState<string | null>(null);
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [currentVideoSrc, setCurrentVideoSrc] = useState<string>('');
+  const [currentProjectTitle, setCurrentProjectTitle] = useState<string>('');
   const [showModalTitle, setShowModalTitle] = useState(true);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -19,8 +21,10 @@ const MLProjects = () => {
       github: 'https://github.com/dipseek/Insurance-Premium-API.git',
       technologies: ['FastAPI', 'Docker', 'Python', 'Scikit-learn', 'Pandas', 'NumPy'],
       dockerImage: 'docker pull dipseek/insurance-premium-api:latest',
-      image: 'https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80',
-      hasImage: true
+      liveDemo: 'FastAPI Demo',
+      hasVideo: true,
+      videoSrc: fastapiVideo,
+      thumbnail: fastapiVideo
     },
     {
       title: 'Movie Recommendation System',
@@ -265,7 +269,10 @@ const MLProjects = () => {
                     
                     {/* Full Screen Button */}
                     <button
-                      onClick={(e) => handleVideoModalOpen(project.videoSrc, e)}
+                      onClick={(e) => {
+                        setCurrentProjectTitle(project.title);
+                        handleVideoModalOpen(project.videoSrc, e);
+                      }}
                       className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white p-2 rounded-lg hover:bg-black/70 hover:scale-110 transition-all duration-200 opacity-0 group-hover:opacity-100 cursor-pointer"
                       title="Open in full screen"
                     >
@@ -366,7 +373,7 @@ const MLProjects = () => {
                   animate={{ opacity: showModalTitle ? 1 : 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  Movie Recommendation - Live Demo
+                  {currentProjectTitle} - Live Demo
                 </motion.h3>
                 <button
                   onClick={handleVideoModalClose}
