@@ -72,7 +72,7 @@ const EducationPage = () => {
                 </div>
               </div>
               
-              <div className="flex-1 text-center">
+              <div className="flex-1">
                 <h3 className="text-gray-200 font-bold text-lg sm:text-xl lg:text-2xl mb-2 sm:mb-3">
                   Bachelor of Technology in Computer Science
                 </h3>
@@ -80,7 +80,7 @@ const EducationPage = () => {
                   Jaipur Engineering College
                 </p>
                 
-                <div className="flex flex-row items-center justify-center space-x-3 sm:space-x-6 text-gray-400 mb-6">
+                <div className="flex flex-row items-center space-x-3 sm:space-x-6 text-gray-400 mb-6">
                   <div className="flex items-center space-x-2 bg-cyan-500/20 px-3 sm:px-4 py-2 rounded-full">
                     <Calendar className="w-4 h-4" />
                     <span className="text-sm font-medium">2022 - 2026</span>
