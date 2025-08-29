@@ -83,7 +83,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+    <section id="about" className="pt-4 pb-12 sm:pt-6 sm:pb-16 lg:pt-8 lg:pb-20 relative overflow-hidden">
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           variants={containerVariants}
