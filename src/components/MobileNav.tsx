@@ -126,7 +126,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
 
               {/* Social Links */}
               <div className="mt-auto space-y-6">
-                <div className="flex space-x-1 sm:space-x-2 justify-center sm:justify-start">
+                <div className="flex justify-center sm:justify-start">
                   <a
                     href="https://github.com/dipseek"
                     target="_blank"
