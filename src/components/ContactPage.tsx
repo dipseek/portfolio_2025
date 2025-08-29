@@ -99,10 +99,10 @@ const ContactPage = () => {
           transition={{ duration: 0.8 }}
           className="mb-8 sm:mb-10 lg:mb-12"
         >
-          <div className="flex items-center mb-4 sm:mb-6">
+          <div className="flex justify-center mb-4 sm:mb-6">
             <Link 
               to="/"
-              className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200 mr-4 min-h-[44px] py-2 px-3 rounded-lg hover:bg-cyan-500/10"
+              className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200 min-h-[44px] py-2 px-3 rounded-lg hover:bg-cyan-500/10"
               aria-label="Navigate back to home page"
             >
               <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
