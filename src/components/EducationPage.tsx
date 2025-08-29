@@ -65,14 +65,14 @@ const EducationPage = () => {
             variants={itemVariants}
             className="bg-black/40 backdrop-blur-md rounded-xl p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 shadow-xl"
           >
-            <div className="flex items-start space-x-6">
-              <div className="flex-shrink-0">
+            <div className="flex flex-col sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+              <div className="flex-shrink-0 self-center sm:self-start">
                 <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/25">
                   <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-black" />
                 </div>
               </div>
               
-              <div className="flex-1">
+              <div className="flex-1 text-center sm:text-left">
                 <h3 className="text-gray-200 font-bold text-lg sm:text-xl lg:text-2xl mb-2 sm:mb-3">
                   Bachelor of Technology in Computer Science
                 </h3>
@@ -80,12 +80,12 @@ const EducationPage = () => {
                   Jaipur Engineering College
                 </p>
                 
-                <div className="flex items-center space-x-6 text-gray-400 mb-6">
-                  <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-full">
+                <div className="flex flex-row items-center justify-center sm:justify-start space-x-3 sm:space-x-6 text-gray-400 mb-6">
+                  <div className="flex items-center space-x-2 bg-cyan-500/20 px-3 sm:px-4 py-2 rounded-full">
                     <Calendar className="w-4 h-4" />
                     <span className="text-sm font-medium">2022 - 2026</span>
                   </div>
-                  <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-full">
+                  <div className="flex items-center space-x-2 bg-cyan-500/20 px-3 sm:px-4 py-2 rounded-full">
                     <Award className="w-4 h-4" />
                     <span className="text-sm font-medium">CGPA: 8.5</span>
                   </div>

@@ -25,7 +25,7 @@ const EducationSection = () => {
                 Jaipur Engineering College
               </p>
               
-              <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start space-y-2 sm:space-y-0 sm:space-x-6 text-gray-400 mb-4 sm:mb-6">
+              <div className="flex flex-row items-center justify-center sm:justify-start space-x-3 sm:space-x-6 text-gray-400 mb-4 sm:mb-6">
                 <div className="flex items-center space-x-2 bg-cyan-500/20 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full">
                   <Calendar className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span className="text-xs sm:text-sm font-medium">2022 - 2026</span>
