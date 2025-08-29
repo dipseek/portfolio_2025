@@ -12,7 +12,7 @@ const AboutPage = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-8 sm:mb-10 lg:mb-12 flex justify-center"
+          className="mb-4 sm:mb-6 lg:mb-8 flex justify-center"
         >
           <Link
             to="/"
