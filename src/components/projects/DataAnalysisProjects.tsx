@@ -61,8 +61,8 @@ const DataAnalysisProjects = () => {
   };
 
   return (
-    <section className="py-20">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 sm:py-16 lg:py-20 min-h-screen">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,10 +73,11 @@ const DataAnalysisProjects = () => {
           <div className="flex items-center mb-6">
             <Link 
               to="/projects"
-              className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200 mr-4"
+              className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200 mr-4 min-h-[44px] py-2 px-3 rounded-lg hover:bg-cyan-500/10"
+              aria-label="Navigate back to projects page"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
-              Back to Projects
+              <span>Back to Projects</span>
             </Link>
           </div>
           

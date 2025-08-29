@@ -101,7 +101,7 @@ const HeroSection = () => {
         <div className="px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20 text-center space-y-8 sm:space-y-10 lg:space-y-12">
           {/* Profile Photo */}
           <motion.div 
-            className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 mx-auto rounded-full mb-6 sm:mb-8 lg:mb-10 shadow-xl"
+            className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 mx-auto rounded-full mb-4 sm:mb-5 lg:mb-6 shadow-xl"
             variants={itemVariants}
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
@@ -117,7 +117,7 @@ const HeroSection = () => {
 
           {/* Main Headline - Typewriter Effect */}
           <motion.div variants={typewriterVariants}>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-white leading-tight drop-shadow-lg min-h-[2.5rem] sm:min-h-[3rem] md:min-h-[4rem] lg:min-h-[5rem] xl:min-h-[6rem] flex items-center justify-center">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-white leading-tight drop-shadow-lg min-h-[2rem] sm:min-h-[2.5rem] md:min-h-[3rem] lg:min-h-[4rem] xl:min-h-[5rem] flex items-center justify-center">
               {text}
               {showCursor && <span className="animate-pulse">|</span>}
             </h1>
@@ -125,12 +125,12 @@ const HeroSection = () => {
 
           {/* Professional Tagline under Name */}
           <motion.div variants={itemVariants}>
-            <p className="text-white/80 text-sm sm:text-base md:text-lg lg:text-xl">Turning data into insights.</p>
+            <p className="text-white/80 text-xs sm:text-sm md:text-base lg:text-lg">Turning data into insights.</p>
           </motion.div>
 
           {/* Subtitle - Professional Title */}
           <motion.div variants={itemVariants}>
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium text-cyan-400 drop-shadow">
+            <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-cyan-400 drop-shadow">
               Data Scientist | AI Enthusiast | Fresher
             </h2>
           </motion.div>
@@ -138,7 +138,7 @@ const HeroSection = () => {
           {/* Career-aligned Quote - Gradient Reveal Effect */}
           <motion.div variants={gradientTextVariants}>
             <h3 
-              className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-medium bg-gradient-to-r from-cyan-400 via-gray-200 to-cyan-400 bg-clip-text text-transparent bg-[length:200%_100%] px-2 sm:px-0"
+              className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-medium bg-gradient-to-r from-cyan-400 via-gray-200 to-cyan-400 bg-clip-text text-transparent bg-[length:200%_100%] px-2 sm:px-0"
               style={{
                 backgroundImage: "linear-gradient(90deg, #00ffcc 0%, #e6e6e6 50%, #00ffcc 100%)"
               }}
@@ -149,7 +149,7 @@ const HeroSection = () => {
 
           {/* Location */}
           <motion.p 
-            className="text-gray-300 text-sm sm:text-base md:text-lg lg:text-xl"
+            className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg"
             variants={itemVariants}
           >
             Jaipur, Rajasthan

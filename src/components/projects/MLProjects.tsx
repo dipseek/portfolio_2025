@@ -149,7 +149,7 @@ const MLProjects = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20">
+    <section className="py-12 sm:py-16 lg:py-20 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
@@ -161,7 +161,8 @@ const MLProjects = () => {
           <div className="flex items-center mb-4 sm:mb-6">
             <Link 
               to="/projects"
-              className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200 mr-4"
+              className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200 mr-4 min-h-[44px] py-2 px-3 rounded-lg hover:bg-cyan-500/10"
+              aria-label="Navigate back to projects page"
             >
               <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
               <span className="text-sm sm:text-base">Back to Projects</span>

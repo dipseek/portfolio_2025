@@ -27,7 +27,7 @@ const EducationPage = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20">
+    <section className="py-12 sm:py-16 lg:py-20 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
@@ -36,20 +36,21 @@ const EducationPage = () => {
           transition={{ duration: 0.8 }}
           className="mb-8 sm:mb-10 lg:mb-12"
         >
-          <div className="flex items-center mb-6">
+          <div className="flex items-center mb-4 sm:mb-6">
             <Link 
               to="/"
-              className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200 mr-4"
+              className="flex items-center text-gray-400 hover:text-cyan-400 transition-colors duration-200 mr-4 min-h-[44px] py-2 px-2 rounded-lg hover:bg-cyan-500/10"
+              aria-label="Navigate back to home page"
             >
-              <ArrowLeft className="w-5 h-5 mr-2" />
-              Back to Home
+              <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-1.5 sm:mr-2" />
+              <span className="text-sm sm:text-base">Back to Home</span>
             </Link>
           </div>
           
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-3 sm:mb-4">
             Education
           </h1>
-          <p className="text-lg text-gray-300 max-w-3xl">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-3xl leading-relaxed">
             My academic journey and educational background in Computer Science and Data Engineering.
           </p>
         </motion.div>
