@@ -6,13 +6,13 @@ import SkillsSection from './SkillsSection';
 
 const SkillsPage = () => {
   return (
-    <section className="py-20">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 sm:py-16 lg:py-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-12 flex justify-center"
+          className="mb-8 sm:mb-10 lg:mb-12 flex justify-center"
         >
           <Link
             to="/"

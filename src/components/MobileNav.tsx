@@ -44,18 +44,18 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div className="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40">
-          <div className="fixed left-0 top-0 h-full w-80 bg-black/60 backdrop-blur-lg border-r border-cyan-500/30 transform transition-transform duration-300 ease-in-out">
+          <div className="fixed left-0 top-0 h-full w-72 sm:w-80 bg-black/60 backdrop-blur-lg border-r border-cyan-500/30 transform transition-transform duration-300 ease-in-out">
             <div className="p-8 flex flex-col h-full pt-16">
               {/* Logo */}
-              <div className="mb-12">
-                <h1 className="text-2xl font-bold text-cyan-400 tracking-tight">
+              <div className="mb-8 sm:mb-12">
+                <h1 className="text-xl sm:text-2xl font-bold text-cyan-400 tracking-tight">
                   Deepika Saini
                 </h1>
                 <p className="text-cyan-300 text-sm mt-2">An Engineer</p>
               </div>
 
               {/* Navigation */}
-              <nav className="space-y-6 mb-12">
+              <nav className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
                 {[
                   { id: 'home', label: 'Home', isLink: true, path: '/', icon: <Home className="w-4 h-4" /> },
                   { id: 'about', label: 'About', isLink: true, path: '/about' },

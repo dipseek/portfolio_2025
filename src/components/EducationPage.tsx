@@ -27,14 +27,14 @@ const EducationPage = () => {
   };
 
   return (
-    <section className="py-20">
-      <div className="max-w-4xl mx-auto">
+    <section className="py-12 sm:py-16 lg:py-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mb-12"
+          className="mb-8 sm:mb-10 lg:mb-12"
         >
           <div className="flex items-center mb-6">
             <Link 
@@ -46,7 +46,7 @@ const EducationPage = () => {
             </Link>
           </div>
           
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-200 mb-4">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-3 sm:mb-4">
             Education
           </h1>
           <p className="text-lg text-gray-300 max-w-3xl">
@@ -66,13 +66,13 @@ const EducationPage = () => {
           >
             <div className="flex items-start space-x-6">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/25">
-                  <GraduationCap className="w-8 h-8 text-black" />
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/25">
+                  <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-black" />
                 </div>
               </div>
               
               <div className="flex-1">
-                <h3 className="text-gray-200 font-bold text-2xl mb-3">
+                <h3 className="text-gray-200 font-bold text-lg sm:text-xl lg:text-2xl mb-2 sm:mb-3">
                   Bachelor of Technology in Computer Science
                 </h3>
                 <p className="text-cyan-400 font-semibold text-lg mb-4">

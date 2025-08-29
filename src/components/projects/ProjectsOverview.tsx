@@ -75,13 +75,13 @@ const ProjectsOverview = () => {
   };
 
   return (
-    <section id="projects" className="py-20">
-      <div className="max-w-4xl mx-auto">
+    <section id="projects" className="py-12 sm:py-16 lg:py-20">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 lg:mb-16"
         >
           {isStandalonePage && (
             <div className="flex justify-center mb-6">
@@ -94,10 +94,10 @@ const ProjectsOverview = () => {
               </Link>
             </div>
           )}
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-200 mb-6">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-200 mb-4 sm:mb-6">
             My Projects
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-300 max-w-2xl mx-auto px-4 sm:px-0">
             Explore my work across different technologies and domains. Each category contains 
             carefully crafted projects showcasing various skills and applications.
           </p>
@@ -107,7 +107,7 @@ const ProjectsOverview = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="space-y-6"
+          className="space-y-4 sm:space-y-6"
         >
           {categories.map((category, index) => (
             <motion.div
@@ -122,7 +122,7 @@ const ProjectsOverview = () => {
               <Link to={category.path}>
                 <div className={`
                   ${category.bgColor} ${category.borderColor}
-                  backdrop-blur-md rounded-xl p-6 border-2 
+                  backdrop-blur-md rounded-xl p-4 sm:p-6 border-2 
                   hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300
                   group cursor-pointer h-full
                 `}>

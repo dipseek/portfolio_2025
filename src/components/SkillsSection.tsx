@@ -221,10 +221,10 @@ const SkillsSection = () => {
   };
 
   return (
-    <section id="skills" className="py-20">
-      <div className="max-w-6xl mx-auto px-4">
+    <section id="skills" className="py-12 sm:py-16 lg:py-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <motion.h2 
-          className="text-3xl sm:text-4xl font-bold text-white mb-12 text-center"
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8 sm:mb-10 lg:mb-12 text-center"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -233,12 +233,12 @@ const SkillsSection = () => {
         </motion.h2>
         
         {/* Tab Navigation */}
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
+        <div className="flex flex-wrap justify-center gap-1 sm:gap-2 mb-6 sm:mb-8 px-2">
           {skillCategories.map((category, index) => (
             <motion.button
               key={category.id}
               onClick={() => setActiveTab(index)}
-              className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 backdrop-blur-sm ${
+              className={`flex items-center space-x-1 sm:space-x-2 px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 backdrop-blur-sm ${
                 activeTab === index
                   ? 'bg-gradient-to-r from-cyan-500 to-cyan-600 text-black shadow-lg'
                   : 'bg-black/40 text-gray-300 hover:bg-black/60 hover:text-cyan-400'
@@ -249,8 +249,10 @@ const SkillsSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              {category.icon}
-              <span className="hidden sm:inline">{category.title}</span>
+              <div className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6">
+                {category.icon}
+              </div>
+              <span className="hidden sm:inline text-xs sm:text-sm">{category.title}</span>
             </motion.button>
           ))}
         </div>
@@ -266,7 +268,7 @@ const SkillsSection = () => {
             className="min-h-[400px]"
           >
             <motion.div
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -275,7 +277,7 @@ const SkillsSection = () => {
                 <motion.div
                   key={skill.name}
                   variants={itemVariants}
-                  className="group relative bg-black/40 backdrop-blur-md rounded-xl p-6 border border-cyan-500/30 hover:bg-black/60 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  className="group relative bg-black/40 backdrop-blur-md rounded-xl p-4 sm:p-6 border border-cyan-500/30 hover:bg-black/60 transition-all duration-300 hover:scale-105 hover:shadow-xl"
                   whileHover={{ 
                     scale: 1.02,
                     boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)"
@@ -287,12 +289,12 @@ const SkillsSection = () => {
                     <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black"></div>
                   </div>
 
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    <div className="flex items-center space-x-2 sm:space-x-3">
+                      <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 w-5 h-5 sm:w-6 sm:h-6">
                         {skill.icon}
                       </div>
-                      <h3 className="text-gray-200 font-semibold text-lg">
+                      <h3 className="text-gray-200 font-semibold text-sm sm:text-base lg:text-lg">
                         {skill.name}
                       </h3>
                     </div>
@@ -300,7 +302,7 @@ const SkillsSection = () => {
                   
                   <div className="flex justify-between items-center">
                     <StarRating rating={skill.rating} />
-                    <span className="text-gray-400 text-sm">
+                    <span className="text-gray-400 text-xs sm:text-sm">
                       {skill.rating}/5
                     </span>
                   </div>

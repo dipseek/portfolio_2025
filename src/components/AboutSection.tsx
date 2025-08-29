@@ -83,8 +83,8 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
-      <div className="relative z-10 max-w-6xl mx-auto px-4">
+    <section id="about" className="py-12 sm:py-16 lg:py-20 relative overflow-hidden">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -93,7 +93,7 @@ const AboutSection = () => {
         >
           {/* Main Heading */}
           <motion.h2 
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-200 mb-8 sm:mb-12 lg:mb-16 text-center"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-200 mb-6 sm:mb-8 md:mb-12 lg:mb-16 text-center"
             variants={itemVariants}
           >
             About Me
@@ -101,11 +101,11 @@ const AboutSection = () => {
           
           {/* Main Introduction */}
           <motion.div 
-            className="mb-8 sm:mb-12 lg:mb-16"
+            className="mb-6 sm:mb-8 md:mb-12 lg:mb-16"
             variants={itemVariants}
           >
-            <div className="p-4 sm:p-6 lg:p-8">
-              <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed text-center max-w-4xl mx-auto">
+            <div className="p-3 sm:p-4 md:p-6 lg:p-8">
+              <p className="text-gray-300 text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-center max-w-4xl mx-auto px-2 sm:px-0">
                 I'm <span className="text-cyan-400 font-semibold">Deepika Saini</span>, an aspiring Data Scientist from Jaipur. I specialize in building data-driven solutions using Python, SQL, and modern ML/NLP libraries including TensorFlow, Scikit-learn, and NLTK. I'm comfortable working with Jupyter, Excel, and Power BI for analysis and visualization, and I have hands-on exposure to deploying models and apps using AWS, Docker, FastAPI, and Tkinter. I'm driven by curiosity, clarity, and impact—eager to contribute to real-world projects and grow with a team that values learning and execution.
               </p>
             </div>
