@@ -11,13 +11,13 @@ const EducationSection = () => {
         
         <div className="bg-black/40 backdrop-blur-md rounded-xl p-4 sm:p-6 lg:p-8 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 shadow-xl">
           <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
-            <div className="flex-shrink-0 self-center sm:self-start">
+            <div className="flex-shrink-0 self-start">
               <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/25">
                 <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-black" />
               </div>
             </div>
             
-            <div className="flex-1 text-center">
+            <div className="flex-1 text-center sm:text-left">
               <h3 className="text-gray-200 font-bold text-base sm:text-lg md:text-xl lg:text-2xl mb-2 sm:mb-3">
                 Bachelor of Technology in Computer Science
               </h3>
