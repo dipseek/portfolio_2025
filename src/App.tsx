@@ -6,6 +6,7 @@ import HeroSection from './components/HeroSection';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import EducationSection from './components/EducationSection';
+import CertificationsSection from './components/CertificationsSection';
 import ContactSection from './components/ContactSection';
 import AnimatedBackground from './components/AnimatedBackground';
 import FloatingHomeButton from './components/FloatingHomeButton';
@@ -13,11 +14,12 @@ import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load components for better performance
 const ProjectsOverview = React.lazy(() => import('./components/projects/ProjectsOverview'));
-const PythonProjects = React.lazy(() => import('./components/projects/PythonProjects'));
+const SummerInternshipProjects = React.lazy(() => import('./components/projects/PythonProjects'));
 const MLProjects = React.lazy(() => import('./components/projects/MLProjects'));
 const DataAnalysisProjects = React.lazy(() => import('./components/projects/DataAnalysisProjects'));
 const GenAIProjects = React.lazy(() => import('./components/projects/GenAIProjects'));
 const EducationPage = React.lazy(() => import('./components/EducationPage'));
+const CertificationsPage = React.lazy(() => import('./components/CertificationsPage'));
 const ContactPage = React.lazy(() => import('./components/ContactPage'));
 const AboutPage = React.lazy(() => import('./components/AboutPage'));
 const SkillsPage = React.lazy(() => import('./components/SkillsPage'));
@@ -95,15 +97,17 @@ function App() {
                     <SkillsSection />
                     <ProjectsOverview />
                     <EducationSection />
+                    <CertificationsSection />
                     <ContactSection />
                   </>
                 } />
                 <Route path="/projects" element={<ProjectsOverview />} />
-                <Route path="/projects/python" element={<PythonProjects />} />
+                <Route path="/summer-internship" element={<SummerInternshipProjects />} />
                 <Route path="/projects/ml" element={<MLProjects />} />
                 <Route path="/projects/data-analysis" element={<DataAnalysisProjects />} />
                 <Route path="/projects/genai" element={<GenAIProjects />} />
                 <Route path="/education" element={<EducationPage />} />
+                <Route path="/certifications" element={<CertificationsPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/skills" element={<SkillsPage />} />

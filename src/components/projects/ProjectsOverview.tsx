@@ -7,7 +7,8 @@ import {
   BarChart3, 
   Sparkles,
   ArrowRight,
-  Home
+  Home,
+  GraduationCap
 } from 'lucide-react';
 
 const ProjectsOverview = () => {
@@ -15,13 +16,13 @@ const ProjectsOverview = () => {
   const isStandalonePage = location.pathname === '/projects';
   const categories = [
     {
-      title: 'Python Projects',
-      description: 'Automation, APIs, and utility applications built with Python',
-      icon: Code2,
-      path: '/projects/python',
-      color: 'from-cyan-500 to-cyan-600',
+      title: 'Summer Internship Training',
+      description: 'Multi-technology automation platform integrating Python, AWS, Docker, AI, and full-stack development',
+      icon: GraduationCap,
+      path: '/summer-internship',
+      color: 'from-green-500 to-emerald-600',
       bgColor: 'bg-black/40',
-      borderColor: 'border-cyan-500/30'
+      borderColor: 'border-green-500/30'
     },
     {
       title: 'Machine Learning',
@@ -124,7 +125,7 @@ const ProjectsOverview = () => {
                 <div className={`
                   ${category.bgColor} ${category.borderColor}
                   backdrop-blur-md rounded-xl p-4 sm:p-6 border-2 
-                  hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/10 transition-all duration-300
+                  hover:border-opacity-70 hover:shadow-lg transition-all duration-300
                   group cursor-pointer h-full
                 `}>
                   <div className="flex items-start justify-between mb-4">

@@ -37,6 +37,7 @@ const Sidebar = () => {
               { id: 'skills', label: 'Skills', path: '/skills' },
               { id: 'projects', label: 'Projects', path: '/projects' },
               { id: 'education', label: 'Education', path: '/education' },
+              { id: 'certifications', label: 'Certifications', path: '/certifications' },
               { id: 'contact', label: 'Contact', path: '/contact' }
             ].map((item) => (
               <Link

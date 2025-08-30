@@ -47,6 +47,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
     { id: 'skills', label: 'Skills', isLink: true, path: '/skills' },
     { id: 'projects', label: 'Projects', isLink: true, path: '/projects' },
     { id: 'education', label: 'Education', isLink: true, path: '/education' },
+    { id: 'certifications', label: 'Certifications', isLink: true, path: '/certifications' },
     { id: 'contact', label: 'Contact', isLink: true, path: '/contact' }
   ], []);
 
