@@ -16,15 +16,6 @@ const ProjectsOverview = () => {
   const isStandalonePage = location.pathname === '/projects';
   const categories = [
     {
-      title: 'Summer Internship Training',
-      description: 'Multi-technology automation platform integrating Python, AWS, Docker, AI, and full-stack development',
-      icon: GraduationCap,
-      path: '/summer-internship',
-      color: 'from-green-500 to-emerald-600',
-      bgColor: 'bg-black/40',
-      borderColor: 'border-green-500/30'
-    },
-    {
       title: 'Machine Learning',
       description: 'ML models, algorithms, and data science projects',
       icon: Brain,
@@ -50,6 +41,15 @@ const ProjectsOverview = () => {
       color: 'from-cyan-500 to-cyan-600',
       bgColor: 'bg-black/40',
       borderColor: 'border-cyan-500/30'
+    },
+    {
+      title: 'Summer Internship Training',
+      description: 'Multi-technology automation platform integrating Python, AWS, Docker, AI, and full-stack development',
+      icon: GraduationCap,
+      path: '/summer-internship',
+      color: 'from-green-500 to-emerald-600',
+      bgColor: 'bg-black/40',
+      borderColor: 'border-green-500/30'
     }
   ];
 
